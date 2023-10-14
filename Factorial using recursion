@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int factorial(int n)
+{
+    if (n == 0)
+        return 1;
+
+    int smallerProb = factorial(n - 1);
+    int BiggerProb = n * smallerProb;
+
+    return BiggerProb;
+}
+
+int main()
+{
+
+    int n;
+    cout << "Enter n" << endl;
+    cin >> n;
+    int ans = factorial(n);
+    cout << ans << endl;
+}
